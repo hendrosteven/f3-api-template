@@ -51,14 +51,14 @@ class SecureRoute extends BaseRoute{
         $token = $this->getBearerToken();
         if(isset($token)){
 		    if (!$this->validateToken($token)) {
-                $this->errorData['code'] = 401;
-                $this->errorData['message'] = 'Invalid Token';
-                API::error($this->errorData['code'], $this->errorData['message']);
+                $this->errorData['success'] = false;
+                $this->errorData['payload'] = 'Invalid Token';
+                API::error($this->errorData['success'], $this->errorData['payload']);
             }
         }else{
-            $this->errorData['code'] = 401;
-            $this->errorData['message'] = 'Please provide a token to access this resource';
-            API::error($this->errorData['code'], $this->errorData['message']);
+            $this->errorData['success'] = false;
+            $this->errorData['payload'] = 'Please provide a token to access this resource';
+            API::error($this->errorData['success'], $this->errorData['payload']);
         }
     }
     

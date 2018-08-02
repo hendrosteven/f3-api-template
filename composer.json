@@ -4,6 +4,7 @@
         "firebase/php-jwt": "^5.0",
         "vlucas/valitron": "^1.4",
         "dompdf/dompdf": "^0.8.2",
-        "mailgun/mailgun-php": "^2.4"
+        "mailgun/mailgun-php": "^2.4",
+        "gabordemooij/redbean": "dev-master"
     }
 }

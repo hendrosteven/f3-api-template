@@ -3,6 +3,9 @@
 class HomeController extends SecureRoute{
 
     function index(){
-       $this->data = $this->account;
+       $this->data = array(
+           "success" => true,
+           "payload" => ['messages'=>'Welcome', 'account'=>$this->account]
+       );
     }
 }

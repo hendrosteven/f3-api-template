@@ -25,8 +25,8 @@ class API{
 		$m = is_array($message) ? $message['status'] : $message;
 
 		// Set the message and the code
-		$data['message'] = $m;
-		$data['code'] = $code;
+		$data['payload'] = $m;
+		$data['success'] = $code;
 
 		// Render all in json
 		echo json_encode($data, JSON_NUMERIC_CHECK);
